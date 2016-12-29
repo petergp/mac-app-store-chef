@@ -96,7 +96,7 @@ module MacAppStore
         def latest_version?
           @latest_version ||= JSON.parse(
             Net::HTTP.get(
-              URI('https://api.github.com/repos/argon/mas/releases')
+              URI('https://api.github.com/repositories/40092232/releases')
             )
           ).first['tag_name'].gsub(/^v/, '')
         end
